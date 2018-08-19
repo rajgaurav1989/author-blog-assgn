@@ -1,0 +1,181 @@
+mutation{
+  createAuthor(author:{
+    name : "Raj Gaurav",
+    email : "rajgaurav1989.bits10@gmail.com"
+  }){
+    id
+    name
+    email
+  }
+}
+
+mutation{
+  createAuthor(author:{
+    name : "Raj Gaurav",
+    email : "rajgaurav1989.bits10@gmail.com"
+  }){
+    id
+    name
+    email
+  }
+}
+
+
+mutation{
+  createAuthor(author:{
+    name : "Michael Jackson",
+    email : "michael.bits@gmail.com",
+    blogs:[
+      {
+        blog_content: "Blog1 by Michael"
+      },
+      {
+        blog_content: "Blog by Michael"
+      }
+    ]
+  }){
+    id
+    name
+    email
+  }
+}
+
+mutation{
+  createAuthor(author:{
+    name : "Michael Jackson",
+    email : "michael.bits@gmail.com",
+    blogs:[
+      {
+        blog_content: "Blog1 by Michael"
+      },
+      {
+        blog_content: "Blog by Michael"
+      }
+    ]
+  }){
+    id
+    name
+    email
+  }
+}
+
+mutation{
+  createAuthor(author:{
+    name : "Michael Jackson",
+    email : "michael.bits@gmail.com",
+    blogs:[
+      {
+        blog_content: "Blog1 by Michael"
+      },
+      {
+        blog_content: "Blog by Michael"
+      }
+    ]
+  }){
+    id
+    name
+    email
+  }
+}
+
+mutation{
+	deleteBlog(id: 1){
+    id
+    blog_content
+  }
+}
+
+mutation{
+	updateBlog(id: 2, blog_content: "New version of this blog!"){
+    id,
+    blog_content
+  }
+}
+
+{
+  blog(id:4){
+    id
+    blog_content
+    author{
+      id
+      name
+      email
+      blogs{
+        id
+        blog_content
+      }
+    }
+  }
+}
+
+{
+  author(id:4){
+    id
+    name
+    email
+    blogs{
+      id
+      author{
+        id
+        name
+      }
+      blog_content
+    }
+  }
+}
+
+{
+  authors{
+    id
+    name
+    blogs{
+      id
+      
+      blog_content
+    }
+  }
+}
+
+
+{
+  blogs{
+    id
+    blog_content
+    author{
+      id
+      name
+    }
+  }
+}
+
+mutation{
+  updateAuthor(id:2,name:"Raju",email:"abcd@gmail.com"){
+    id
+    name
+    email
+  }
+}
+
+
+mutation{
+  removeAuthor(id:4){
+    id
+    name
+  }
+}
+
+
+mutation{
+  deleteBlog(id:4){
+    id
+    blog_content
+  }
+}
+
+
+mutation{
+  createBlogWithAuthId(author_id:6,blog_content:"blog by raj"){
+    id
+    blog_content
+  }
+}

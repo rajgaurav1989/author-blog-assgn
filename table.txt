@@ -1,0 +1,12 @@
+sudo -i -u postgres
+
+createuser testgraphql
+
+createdb testgraphql
+
+psql
+
+psql# alter user testgraphql with encrypted password 'testgraphql';
+
+psql# grant all privileges on database testgraphql to testgraphql;
+

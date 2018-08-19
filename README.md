@@ -7,3 +7,5 @@ npm install
 npm start
 
 http://localhost:3000/graphql
+
+check file query.txt for sample graphql queries and mutations

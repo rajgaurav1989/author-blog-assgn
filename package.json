@@ -8,10 +8,13 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-register": "^6.24.1",
     "body-parser": "^1.17.2",
+    "eslint": "^5.4.0",
     "express": "^4.15.3",
     "express-graphql": "^0.6.6",
     "graphql": "^0.10.5",
+    "install": "^0.12.1",
     "mysql2": "^1.3.6",
+    "npm": "^6.4.0",
     "pg": "^7.4.3",
     "sequelize": "^4.3.2",
     "sequelize-cli": "^2.8.0"

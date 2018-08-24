@@ -1,10 +1,27 @@
 import Express from 'express';
 import GraphHTTP from 'express-graphql';
 import Schema from './schema/schema';
+import models from './dbmodels/models'
 
 const APP_PORT = 3000;
 
 const app = Express();
+
+// function startApp(port) {
+//     app.listen(port, function() {
+//         console.log('Server is listening on port ' + port);
+//     });
+// }
+
+models.sequelize.sync()
+    .then(function() {
+        app.listen(APP_PORT, ()=> {
+          console.log(`App listening on port ${APP_PORT}`);
+        });
+    })
+    .catch(function (e) {
+        throw new Error(e);
+    });
 
 app.use('/graphql', GraphHTTP({
   schema: Schema,
@@ -12,6 +29,3 @@ app.use('/graphql', GraphHTTP({
   graphiql: true
 }));
 
-app.listen(APP_PORT, ()=> {
-  console.log(`App listening on port ${APP_PORT}`);
-});

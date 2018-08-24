@@ -7,12 +7,6 @@ const APP_PORT = 3000;
 
 const app = Express();
 
-// function startApp(port) {
-//     app.listen(port, function() {
-//         console.log('Server is listening on port ' + port);
-//     });
-// }
-
 models.sequelize.sync()
     .then(function() {
         app.listen(APP_PORT, ()=> {

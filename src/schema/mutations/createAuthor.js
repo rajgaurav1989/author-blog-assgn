@@ -27,7 +27,7 @@ let createAuthor = {
             return models.Author.build({
                 name: args.author.name,
                 email: args.author.email
-            }).save().then(function(newAuthor) {
+            }).save().then((newAuthor) => {
                     const blogs = args.author.blogs || [];
                     blogs.forEach((blog) => {
                         models.Blog.create({

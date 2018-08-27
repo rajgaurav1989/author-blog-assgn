@@ -20,7 +20,7 @@ let authorQuery = {
             type: new GraphQLNonNull(GraphQLID)
         }
     },
-    resolve(root, args) {
+    resolve(source, args) {
         return models.Author.findById(args.id);
     }   
 }

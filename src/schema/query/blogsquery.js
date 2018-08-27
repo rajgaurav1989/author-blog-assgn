@@ -15,7 +15,7 @@ import Author from '../authortype';
 
 let blogsQuery = {
     type: new GraphQLList(Blog),
-    resolve(root, args) {
+    resolve(source, args) {
         return models.Blog.findAll();
     }
 }

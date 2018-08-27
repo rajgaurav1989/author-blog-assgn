@@ -21,7 +21,7 @@ let blogQuery = {
             type: new GraphQLNonNull(GraphQLID)
         }
     },
-    resolve(root, args) {
+    resolve(source, args) {
         return models.Blog.findById(args.id);
     }
 }

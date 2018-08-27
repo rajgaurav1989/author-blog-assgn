@@ -9,14 +9,14 @@ import {
     GraphQLInputObjectType
 } from 'graphql';
 
-import models from '../../dbmodels/models';
+import models from '../../dbmodels/modelHelper';
 import Blog from '../blogtype' ;
 import Author from '../authortype';
 import BlogInput from '../bloginputtype' ;
 import AuthorInput from '../authorinputtype' ;
 
-export default {
-	type: Author,
+let updateAuthor = {
+    type: Author,
     args: {
         id: {
             type: new GraphQLNonNull(GraphQLInt)
@@ -35,5 +35,6 @@ export default {
                 return newAuthor.update({ name : args.name , email : args.email });
         });
     }
-    
 }
+
+export default updateAuthor;

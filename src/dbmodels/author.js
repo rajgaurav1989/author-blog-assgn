@@ -1,5 +1,8 @@
-module.exports = function(sequelize, Sequelize) {
-	var Author = sequelize.define('author', {
+import Sequelize from 'sequelize';
+import DBConnection from './connection';
+import Blog from './blog' ;
+
+const author = DBConnection.define('author', {
         id: {
             type: Sequelize.INTEGER,
             autoIncrement: true,
@@ -25,5 +28,6 @@ module.exports = function(sequelize, Sequelize) {
         freezeTableName: true
     });
 
-    return Author ;
-}
+
+
+export default author ;

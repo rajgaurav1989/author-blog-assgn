@@ -9,14 +9,14 @@ import {
     GraphQLInputObjectType
 } from 'graphql';
 
-import models from '../../dbmodels/models';
+import models from '../../dbmodels/modelHelper';
 import Blog from '../blogtype' ;
 import Author from '../authortype';
 import BlogInput from '../bloginputtype' ;
 import AuthorInput from '../authorinputtype' ;
 
-export default {
-	type : Author,
+let removeAuthor = {
+    type : Author,
     args : {
         id : {
             type : new GraphQLNonNull(GraphQLInt)
@@ -30,4 +30,6 @@ export default {
                 return oldAuthor.destroy({ force: true });
         });
     }
-}
+};
+
+export default removeAuthor ;

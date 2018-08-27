@@ -9,7 +9,7 @@ import {
     GraphQLInputObjectType
 } from 'graphql';
 
-import models from '../dbmodels/models';
+import models from '../dbmodels/modelHelper';
 import Author from './authortype';
 
 const Blog = new GraphQLObjectType({

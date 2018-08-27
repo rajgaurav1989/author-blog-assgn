@@ -9,14 +9,15 @@ import {
     GraphQLInputObjectType
 } from 'graphql';
 
-import models from '../../dbmodels/models';
+import models from '../../dbmodels/modelHelper';
 import Blog from '../blogtype' ;
 import Author from '../authortype';
 import BlogInput from '../bloginputtype' ;
 import AuthorInput from '../authorinputtype' ;
 
-export default {
-	type: Author,
+
+let createAuthor = {
+    type: Author,
     args: {
         author: {
             type: AuthorInput
@@ -38,4 +39,6 @@ export default {
             return models.Author.findById(newAuthor.id);
         });
     }
-}
+};
+
+export default createAuthor ;

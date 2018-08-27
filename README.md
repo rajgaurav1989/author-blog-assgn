@@ -1,4 +1,4 @@
-database config is in the file models.js at line 3
+database config is in the file src/dbmodels/connection.js at line 3
 
 see file table.txt for database set up , username , db creation and priviledges
 
